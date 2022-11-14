@@ -4,11 +4,11 @@ public class Cliente extends Pessoa {
 	private Pet pet;
 
 	// Construtor de Cliente
-	public Cliente(int id_Pessoa, String nome, long cpf, char sexo, long telefone, String endereco, Pet pet) {
-		super(id_Pessoa, nome, cpf, sexo, telefone, endereco);
+	public Cliente(Pet pet, int idPessoa, String nome, long cpf, char sexo, long telefone, String email, String endereco) {
+		super(idPessoa, nome, cpf, sexo, telefone, email, endereco);
 		this.pet = pet;
 	}
-	
+
 	// Getters and Setters de Pessoa/Pet
 	public Pet getPet() {
 		return pet;
