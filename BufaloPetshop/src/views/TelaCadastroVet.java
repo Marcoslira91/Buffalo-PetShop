@@ -1,20 +1,20 @@
 package views;
 
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
 import java.awt.Font;
-import javax.swing.JTextField;
-import javax.swing.JRadioButton;
+
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class TelaCadastroCliente extends JFrame {
-
+public class TelaCadastroVet extends JFrame {
+	
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
@@ -22,7 +22,7 @@ public class TelaCadastroCliente extends JFrame {
 	private JTextField textField_3;
 	private JTextField textField_4;
 	private JTextField textField_5;
-
+	private JTextField textField_6;
 	/**
 	 * Launch the application.
 	 */
@@ -30,7 +30,7 @@ public class TelaCadastroCliente extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaCadastroCliente frame = new TelaCadastroCliente();
+					TelaCadastroVet frame = new TelaCadastroVet();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -42,7 +42,7 @@ public class TelaCadastroCliente extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TelaCadastroCliente() {
+	public TelaCadastroVet() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -77,22 +77,19 @@ public class TelaCadastroCliente extends JFrame {
 		JButton btnNewButton = new JButton("Voltar");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
-				TelaCadastroGeral tela= new TelaCadastroGeral();
-				tela.setVisible(true);
 			}
-			
 		});
 		btnNewButton.setBounds(10, 227, 89, 23);
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Continuar");
+		JButton btnNewButton_1 = new JButton("Concluir");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				TelaCadastroPet tela= new TelaCadastroPet();
+				TelaMenu tela= new TelaMenu();
 				tela.setVisible(true);
 			}
+			
 		});
 		btnNewButton_1.setBounds(335, 227, 89, 23);
 		contentPane.add(btnNewButton_1);
@@ -161,5 +158,16 @@ public class TelaCadastroCliente extends JFrame {
 		textField_5.setBounds(159, 178, 86, 20);
 		contentPane.add(textField_5);
 		textField_5.setColumns(10);
+		
+		textField_6 = new JTextField();
+		textField_6.setBounds(157, 228, 86, 20);
+		contentPane.add(textField_6);
+		textField_6.setColumns(10);
+		
+		JLabel lblNewLabel_10 = new JLabel("CRMV:");
+		lblNewLabel_10.setFont(new Font("Tahoma", Font.BOLD, 10));
+		lblNewLabel_10.setBounds(157, 215, 46, 14);
+		contentPane.add(lblNewLabel_10);
 	}
+
 }
