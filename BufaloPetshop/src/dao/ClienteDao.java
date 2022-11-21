@@ -118,7 +118,7 @@ public class ClienteDao {
 	}
 
 	public void atualizaCliente(Cliente clientes) {
-		String sql = "UPDATE Cliente SET nome = ?, nome = ?, cpf = ?, sexo = ?, telefone = ?, email = ?, endereco = ?"
+		String sql = "UPDATE Cliente SET nome = ?, cpf = ?, sexo = ?, telefone = ?, email = ?, endereco = ?"
 				+ " WHERE id = ?";
 
 		Connection conn = null;
