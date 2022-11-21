@@ -26,6 +26,7 @@ public class Pet {
 		this.dataNascimento = dataNascimento;
 		this.pedigree = pedigree;
 	}
+	public Pet() {}
 
 	// Getters and Setters de Pet
 	public int getIdPet() {
@@ -91,12 +92,12 @@ public class Pet {
 	public void setPedigree(String pedigree) {
 		this.pedigree = pedigree;
 	}
-
-	// toString para o Pet
+	
+	// toString para a Pet
 	@Override
 	public String toString() {
 		return "Pet [Id Pet: " + idPet + ", Nome: " + nome + ", Tipo: " + tipo + ", Raca: " + raca + ", Sexo: " + sexo
-				+ ", Cor: " + cor + ", Data de Nascimento=" + dataNascimento + ", Pedigree=" + pedigree + "]";
+				+ ", Cor: " + cor + ", Data Nascimento: " + dataNascimento + ", Pedigree: " + pedigree + "]";
 	}
 
 }

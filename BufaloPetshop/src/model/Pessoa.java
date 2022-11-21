@@ -1,17 +1,16 @@
 package model;
 
 public class Pessoa {
-	private int idPessoa;
+
 	private String nome;
 	private long cpf;
-	private char sexo;
+	private String sexo;
 	private long telefone;
 	private String email;
 	private String endereco;
 
 	// Construtor de Pessoa
-	public Pessoa(int idPessoa, String nome, long cpf, char sexo, long telefone, String email, String endereco) {
-		this.idPessoa = idPessoa;
+	public Pessoa(String nome, long cpf, String sexo, long telefone, String email, String endereco) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.sexo = sexo;
@@ -20,14 +19,11 @@ public class Pessoa {
 		this.endereco = endereco;
 	}
 
-	// Getters and Setters de Pessoa
-	public int getIdPessoa() {
-		return idPessoa;
+	public Pessoa() {
+
 	}
 
-	public void setIdPessoa(int idPessoa) {
-		this.idPessoa = idPessoa;
-	}
+	// Getters and Setters de Pessoa
 
 	public String getNome() {
 		return nome;
@@ -45,11 +41,11 @@ public class Pessoa {
 		this.cpf = cpf;
 	}
 
-	public char getSexo() {
+	public String getSexo() {
 		return sexo;
 	}
 
-	public void setSexo(char sexo) {
+	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
 
@@ -80,8 +76,8 @@ public class Pessoa {
 	// toString para a Pessoa
 	@Override
 	public String toString() {
-		return "Pessoa [Id Pessoa: " + idPessoa + ", Nome: " + nome + ", CPF: " + cpf + ", Sexo: " + sexo
-				+ ", Telefone: " + telefone + ", E-mail: " + email + ", Endereco: " + endereco + "]";
+		return "Pessoa [Nome: " + nome + ", CPF: " + cpf + ", Sexo: " + sexo + ", Telefone: " + telefone + ", E-mail: "
+				+ email + ", Endereco: " + endereco + "]";
 	}
 
 }

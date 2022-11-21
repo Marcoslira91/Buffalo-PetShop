@@ -8,17 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import factory.ConnectionFactory;
-import model.Cliente;
-import model.Pet;
+import model.Servico;
 
-public class ClienteDao {
+public class ServicoDao {
 	// CRUD
-	public void createCliente(Cliente cliente) {
-		String sql = "INSERT INTO Cliente(idPet, idCliente, nome, cpf, sexo, telefone, email, endereco) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+	public void criarServico(Servico servico) {
+		String sql = "INSERT INTO Servico(idServico, banho, tosa, atendimentoMedico, observacao) VALUES (?, ?, ?, ?, ?)";
 
 		Connection conn = null;
 		PreparedStatement pstm = null;
-		
 
 		try {
 			// Criando uma conexão com o banco de dados
@@ -26,18 +24,16 @@ public class ClienteDao {
 			// Criando uma PrepareStatement para executar as funções de conexão
 			pstm = (PreparedStatement) conn.prepareStatement(sql);
 			// Adicionando os valores que são esperados pela query
-			pstm.setInt(1, cliente.getPet().getIdPet());
-			pstm.setInt(2, cliente.getIdCliente());
-			pstm.setString(3, cliente.getNome());
-			pstm.setLong(4, cliente.getCpf());
-			pstm.setString(5, cliente.getSexo());
-			pstm.setLong(6, cliente.getTelefone());
-			pstm.setString(7, cliente.getEmail());
-			pstm.setString(8, cliente.getEndereco());
+			pstm.setInt(1, servico.getIdServico());
+			pstm.setBoolean(2, servico.getBanho());
+			pstm.setBoolean(3, servico.getTosa());
+			pstm.setBoolean(4, servico.getAtendimentoMedico());
+			pstm.setString(5, servico.getObservacao());
 
 			// Executando a query
 			pstm.execute();
 			System.out.println("Executado com sucesso");
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -55,10 +51,10 @@ public class ClienteDao {
 		}
 	}
 
-	public List<Cliente> listaTodoscliente() {
-		String sql = "SELECT * FROM Cliente";
+	public List<Servico> listarTodosServicos() {
+		String sql = "SELECT * FROM Servico";
 
-		List<Cliente> clientes = new ArrayList<Cliente>();
+		List<Servico> Servicos = new ArrayList<Servico>();
 		Connection conn = null;
 		PreparedStatement pstm = null;
 
@@ -73,29 +69,23 @@ public class ClienteDao {
 			rset = pstm.executeQuery();
 
 			while (rset.next()) {
-				Cliente cliente = new Cliente();
+				Servico servico = new Servico();
 
-				// Receber o pet
-	
-				// Receber o idCliente
-				cliente.setIdCliente(rset.getInt("idCliente"));
-				// Receber o nome
-				cliente.setNome(rset.getString("nome"));
-				// Receber o CPF
-				cliente.setCpf(rset.getLong("cpf"));
-				// Receber o sexo
-				cliente.setSexo(rset.getString("sexo"));
-				// Receber o telefone
-				cliente.setTelefone(rset.getLong("telefone"));
-				// Receber o email
-				cliente.setEmail(rset.getString("email"));
-				// Receber o endereco
-				cliente.setEndereco(rset.getString("endereco"));
+				// Receber o idServico
+				servico.setIdServico(rset.getInt("idServico"));
+				// Receber o banho
+				servico.setBanho(rset.getBoolean("banho"));
+				// Receber o tosa
+				servico.setTosa(rset.getBoolean("tosa"));
+				// Receber o atendimentoMedico
+				servico.setAtendimentoMedico(rset.getBoolean("atendimentoMedico"));
+				// Receber o observacao
+				servico.setObservacao(rset.getString("observacao"));
 
-				// Salvar dentro do nosso Array de cliente
-				clientes.add(cliente);
+				// Salvar dentro do nosso Array de Serviços
+				Servicos.add(servico);
+
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -114,12 +104,13 @@ public class ClienteDao {
 				e.printStackTrace();
 			}
 		}
-		return clientes;
+
+		return null;
 	}
 
-	public void atualizaCliente(Cliente cliente) {
-		String sql = "UPDATE Cliente SET nome = ?, cpf = ?, sexo = ?, telefone = ?, email = ?, endereco = ?"
-				+ " WHERE idCliente = ?";
+	public void atualizaServicos(Servico servicos) {
+		String sql = "UPDATE Servico SET idServico = ?,banho = ?,tosa = ?, atendimentomedico = ?, observacao = ?"
+				+ " WHERE id = ?";
 
 		Connection conn = null;
 		PreparedStatement pstm = null;
@@ -129,13 +120,13 @@ public class ClienteDao {
 			conn = ConnectionFactory.createConnectionToMySQL();
 			// Criar a classe para executar a query
 			pstm = (PreparedStatement) conn.prepareStatement(sql);
+
 			// Adicionar os valores para atualizar
-			pstm.setString(1, cliente.getNome());
-			pstm.setLong(2, cliente.getCpf());
-			pstm.setString(3, cliente.getSexo());
-			pstm.setLong(4, cliente.getTelefone());
-			pstm.setString(5, cliente.getEmail());
-			pstm.setString(6, cliente.getEndereco());
+			pstm.setInt(1, servicos.getIdServico());
+			pstm.setBoolean(2, servicos.getBanho());
+			pstm.setBoolean(3, servicos.getTosa());
+			pstm.setBoolean(4, servicos.getAtendimentoMedico());
+			pstm.setString(5, servicos.getObservacao());
 
 			pstm.execute();
 
@@ -154,33 +145,10 @@ public class ClienteDao {
 			}
 		}
 	}
-	private void pesquisaCliente(int id) {
-		String sql = "SELECT * FROM Cliente WHERE idCliente = ? or cpf = ?";
-		Connection conn = null;
-		PreparedStatement pstm = null;
 
-		try {
+	private void deletarServico(int id) {
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (pstm != null) {
-					pstm.close();
-				}
-				if (conn != null) {
-					conn.close();
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-
-		}
-	}
-	
-	private void removerCliente(int id) {
-
-		String sql = "DELETE FROM Cliente WHERE idCliente = ?";
+		String sql = "DELETE FROM Servico WHERE id = ?";
 		Connection conn = null;
 		PreparedStatement pstm = null;
 
