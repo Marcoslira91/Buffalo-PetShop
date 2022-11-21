@@ -13,7 +13,7 @@ import model.Veterinario;
 public class VeterinarioDao {
 	// CRUD
 	public void criarVeterinario(Veterinario veterinario) {
-		String sql = "INSERT INTO Veterinario(idPessoa, nome, cpf, crmv, sexo, telefone, email, endereco) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO Veterinario(idVeterinario, nome, cpf, crmv, sexo, telefone, email, endereco) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
 		Connection conn = null;
 		PreparedStatement pstm = null;
@@ -25,7 +25,7 @@ public class VeterinarioDao {
 			pstm = (PreparedStatement) conn.prepareStatement(sql);
 
 			// Adicionando os valores que são esperados pela query
-			pstm.setInt(1, veterinario.getIdPessoa());
+			pstm.setInt(1, veterinario.getIdVeterinario());
 			pstm.setString(2, veterinario.getNome());
 			pstm.setLong(3, veterinario.getCpf());
 			pstm.setInt(4, veterinario.getCrmv());
