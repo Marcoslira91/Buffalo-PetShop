@@ -10,7 +10,7 @@
  <h4 align="center"> 🚧 Buffalo PetShop 🚀 Em finaização 🚧</h4>
  
  <header>   
- <h2 id="Sobre">📋 Sobre o Projeto</h2>
+ <h2>📋 Sobre o Projeto</h2>
  
  >Projeto desenvolvido como atividade avaliativa do Curso de Qualificação Socioprofissional em Programação de Software pelo Governo do Estado de Pernambuco.
 
@@ -23,15 +23,15 @@ O sistema **Buffalo-PetShop**, é possivel cadastrar novos clientes-pacientes, c
 A aplicação foi desenvolvida pela equipe da **Buffalo** e utilizada para desenvolvimento dos conhecimento obtidos pelos mesmos no último módulo do Curso de Qualificação Socioprofissional em Programação de Software, do [Instituto de Administração e Tecnologia](https://admtec.org.br/).
 </header>
 
-## 🔄 Ambiente de desenvolvimento e ferramentas
+<h2>🔄 Ambiente de desenvolvimento e ferramentas</h2>
 
 As seguintes ferramentas foram usadas na construção do projeto:
 - java JDK
 - Java
 - UML
 
-## 📝 Sumário
-<a href=”#Sobre”>- Sobre o Projeto</a>
+<h2>📝 Sumário</h2>
+
 <!--ts-->
    * [Documentação](#Documentação)
    * [UML](#UML)
@@ -53,7 +53,7 @@ IMAGEM
 
 [IMAGEM]
 
-## 📊 Diagramas e Arquitetura (UML)
+<h2>📊 Diagramas e Arquitetura (UML)</h2>
 
 Cada perfil de usuário tem um certo conjunto de alçadas, sendo o usuário vendedor um perfil de acesso integral. Na imagem abaixo, segue o diagramas indicando as tarefas para cada perfil:
 
