@@ -8,24 +8,20 @@
  	</h1>
 
  <h4 align="center"> 🚧 Buffalo PetShop 🚀 Em finaização 🚧</h4>
-    
- <h2>Sobre o Projeto</h2>
+ 
+ <header>   
+ <h2>📋 Sobre o Projeto</h2>
  
  >Projeto desenvolvido como atividade avaliativa do Curso de Qualificação Socioprofissional em Programação de Software pelo Governo do Estado de Pernambuco.
 
-# Sistema para PetShop em java
-
-## 📋 Sobre do projeto
-
-    Projeto desenvolvido como atividade avaliativa do Curso de Qualificação Profissional em Programação de Software.
-
-O sistema Buffalo-PetShop é uma aplicação criada para gerenciar, organizar e controlar entrada e saídas de dados financeiros e também elevação clínica de pacientes (animal).
+O sistema **Buffalo-PetShop** é uma aplicação criada para gerenciar, organizar e controlar entrada e saídas de dados financeiros e também elevação clínica de pacientes (animal).
 
 De forma pratica, simplificada e intuitiva, o sistema visa automatizar o gerenciamento de serviços e histórico clínico de clientes/pacientes, sendo possível a consulta de procedimentos realizados anteriormente, para que possa ser acompanhado de forma segura por um médico veterinário. Como também a possibilidade de cadastro e verificação do cliente-paciente.
 
-O sistema Buffalo-PetShop, é possivel cadastrar novos clientes-pacientes, cadastrar serviços e Médico veterinário(a), atualizar cadastrados no banco, cadastrar um novo cliente, registrar histórico, evolução e procedimentos realizados no paciente (animal).
+O sistema **Buffalo-PetShop**, é possivel cadastrar novos clientes-pacientes, cadastrar serviços e Médico veterinário(a), atualizar cadastrados no banco, cadastrar um novo cliente, registrar histórico, evolução e procedimentos realizados no paciente (animal).
 
-A aplicação foi desenvolvida pela equipe da Buffalo e utilizada para desenvolvimento dos conhecimento obtidos pelos mesmos no último módulo do Curso de Qualificação Socioprofissional em Programação de Software, do Instituto de Administração e Tecnologia.
+A aplicação foi desenvolvida pela equipe da **Buffalo** e utilizada para desenvolvimento dos conhecimento obtidos pelos mesmos no último módulo do Curso de Qualificação Socioprofissional em Programação de Software, do [Instituto de Administração e Tecnologia](https://admtec.org.br/).
+</header>
 
 ## 🔄 Ambiente de desenvolvimento e ferramentas
 
