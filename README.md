@@ -40,7 +40,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
    * [Pré Requisitos](#Pré-Requisitos)
    * [Tecnologias](#Tecnologias)
    * [Autores](#Autores)
-
+   
+<h2>Interface</h2>
 ### Acesso de um usuário vendedor
 
 IMAGEM
