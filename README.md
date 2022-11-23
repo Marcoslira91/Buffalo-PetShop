@@ -10,7 +10,7 @@
  <h4 align="center"> 🚧 Buffalo PetShop 🚀 Em finaização 🚧</h4>
  
  <header>   
- <h2>📋 Sobre o Projeto</h2>
+ <h2 id="Sobre">📋 Sobre o Projeto</h2>
  
  >Projeto desenvolvido como atividade avaliativa do Curso de Qualificação Socioprofissional em Programação de Software pelo Governo do Estado de Pernambuco.
 
@@ -31,7 +31,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - UML
 
 ## 📝 Sumário
-
+<a href=”#Sobre”>- Sobre o Projeto</a>
 <!--ts-->
    * [Documentação](#Documentação)
    * [UML](#UML)
