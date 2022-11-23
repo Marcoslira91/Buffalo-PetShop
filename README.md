@@ -54,9 +54,12 @@ IMAGEM
 
 [IMAGEM]
 
-<h2>📊 Diagramas e Arquitetura (UML)</h2>
+<h2>Descrição da arquitetura</h2>
+Cada perfil de usuário desempenha um certo conjunto de atividade, sendo o usuário **Atendente** um perfil de acesso integral. Na imagem abaixo, segue o diagramas indicando as tarefas para cada perfil:
 
-Cada perfil de usuário tem um certo conjunto de alçadas, sendo o usuário vendedor um perfil de acesso integral. Na imagem abaixo, segue o diagramas indicando as tarefas para cada perfil:
+[IMAGEM]
+
+<h2>📊 Diagramas de Arquitetura (UML)</h2>
 
 [DIAGRAMA DE FUNCIONADIDADES]
 
