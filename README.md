@@ -34,16 +34,17 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <h2>📝 Sumário</h2>
 
-<!--ts-->
-   *[Sobre o Projeto](#Sobre o Projeto)
-   *[Ambiente de Desenvolvimentoe Ferramentas](#Ambiente de Desenvolvimentoe Ferramentas)
-   *[Interface](#Interface)
-   *[Descrição da Arquitetura](#Descrição da Arquitetura)
-   *[Diagrama de Arquitetura (UML)](#Diagrama de Arquitetura (UML))
-   *[Pré-Requisito](#Pré-Requisito)
-   *[Funcionalidades](#Funcionalidades)
-   *[Tecnologias](#Tecnologias)
-   *[Autores](#Autores)
+
+   * [Sobre o Projeto](#Sobre-o-Projeto)
+   * [Ambiente de Desenvolvimentoe Ferramentas](#Ambiente-de-Desenvolvimentoe-Ferramentas)
+   * [Interface](#Interface)
+   * [Descrição da Arquitetura](#Descrição-da-Arquitetura)
+   * [Diagrama de Arquitetura (UML)](#Diagrama-de-Arquitetura-(UML))
+   * [Pré-Requisito](#Pré-Requisito)
+   * [Funcionalidades](#Funcionalidades)
+   * [Tecnologias](#Tecnologias)
+   * [Autores](#Autores)
+	
    
 <h2>Interface</h2>
 ### Acesso de um usuário vendedor
@@ -65,15 +66,21 @@ Cada perfil de usuário desempenha um certo conjunto de atividade, sendo o usuá
 
 <h2>📊 Diagramas de Arquitetura (UML)</h2>
 
-[DIAGRAMA DE FUNCIONADIDADES]
+**DIAGRAMA DE FUNCIONADIDADES**
 
-[DIAGRAMA DE CLASSES-OBJETO]
+![DIAGRAMA DE FUNCIONADIDADES](https://user-images.githubusercontent.com/53446701/204062464-97775b85-7215-449c-bed0-10001d34521e.png)
 
-[DIAGRAMA DE CASO]
+**DIAGRAMA CLASSES**
 
-[DIAGRAMA DE COMPONENTES]
+![Diagrama Classes](https://user-images.githubusercontent.com/53446701/204061918-abe839ed-e3d5-44a0-9bc9-1618ca1364df.png)
 
+**DIAGRAMA DE CASO**
 
+![DIAGRAMA DE CASO](https://user-images.githubusercontent.com/53446701/204062003-ad62ea00-46d8-4308-a0ee-fb1fe9c6cf13.png)
+
+**DIAGRAMA DE COMPONENTES**
+
+![image](https://user-images.githubusercontent.com/53446701/204062422-7b4ea14f-c9d5-4b33-beec-ead94df0e6ea.png)
 
 **Vendedor:** classe responsável pelo controle geral do estabelecimento, a qual possui acesso global e contém todas as informações para o devido funcionamento do sistema.
 
