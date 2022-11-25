@@ -20,26 +20,30 @@ De forma prática, simplificada e intuitiva, o sistema visa automatizar o gerenc
 
 Com o sistema **Buffalo-PetShop**, é possivel cadastrar o cliente-paciente, os serviços a serem realizados, como também, cadastrar o Médico veterinário(a), atualizar cadastrados no banco, registrar prontuário e procedimentos realizados no paciente (animal).
 
-A aplicação foi desenvolvida pela equipe da **Búffalo** e utilizada para desenvolvimento dos conhecimento obtidos utilizando os paradigmas de Programação Orientada a Objetos - POO, no último módulo do Curso de Qualificação Socioprofissional em Programação de Software, do [Instituto de Administração e Tecnologia](https://admtec.org.br/). Além disso, buscamos seguir osprincípios [SOLID](https://blog.betrybe.com/linguagem-de-programacao/solid-cinco-principios-poo/) com objetivo de facilitar a manutençãoe extensão do projeto.
+A aplicação foi desenvolvida pela equipe da **Búffalo** e utilizada para desenvolvimento dos conhecimento obtidos utilizando os paradigmas de Programação Orientada a Objetos - POO, no último módulo do Curso de Qualificação Socioprofissional em Programação de Software, do [Instituto de Administração e Tecnologia](https://admtec.org.br/). Além disso, buscamos seguir os princípios [**SOLID**](https://blog.betrybe.com/linguagem-de-programacao/solid-cinco-principios-poo/) com objetivo de facilitar a manutençãoe extensão do projeto.
 </header>
 
-<h2>🔄 Ambiente de desenvolvimento e ferramentas</h2>
+<h2>🔄 Ambiente de Desenvolvimento e Ferramentas</h2>
 
 As seguintes ferramentas foram usadas na construção do projeto:
-- java JDK
-- Java
-- UML
+- java JDK-19 (sha256)
+- JavaSE-17
+- Eclipse IDE 2022-06
+- MySQL Workbench 8.0 CE
+- [Draw.io (UML)](https://www.diagrams.net/blog/move-diagrams-net)
 
 <h2>📝 Sumário</h2>
 
 <!--ts-->
-   * [Documentação](#Documentação)
-   * [UML](#UML)
-   * [Funcionalidade](#Funcionalidade)
-   * [Como executar o projeto](#Como-executar-o-projeto)
-   * [Pré Requisitos](#Pré-Requisitos)
-   * [Tecnologias](#Tecnologias)
-   * [Autores](#Autores)
+   *[Sobre o Projeto](#Sobre o Projeto)
+   *[Ambiente de Desenvolvimentoe Ferramentas](#Ambiente de Desenvolvimentoe Ferramentas)
+   *[Interface](#Interface)
+   *[Descrição da Arquitetura](#Descrição da Arquitetura)
+   *[Diagrama de Arquitetura (UML)](#Diagrama de Arquitetura (UML))
+   *[Pré-Requisito](#Pré-Requisito)
+   *[Funcionalidades](#Funcionalidades)
+   *[Tecnologias](#Tecnologias)
+   *[Autores](#Autores)
    
 <h2>Interface</h2>
 ### Acesso de um usuário vendedor
