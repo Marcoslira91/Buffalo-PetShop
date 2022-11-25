@@ -26,7 +26,7 @@ A aplicação foi desenvolvida pela equipe da **Búffalo** e utilizada para dese
 <h2>🔄 Ambiente de Desenvolvimento e Ferramentas</h2>
 
 As seguintes ferramentas foram usadas na construção do projeto:
-- java JDK-19 (sha256)
+- Java JDK-19 (sha256)
 - JavaSE-17
 - Eclipse IDE 2022-06
 - MySQL Workbench 8.0 CE
@@ -46,7 +46,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
    * [Autores](#Autores)
 	
    
-<h2>Interface</h2>
+<h2>📝Interface</h2>
+
 ### Acesso de um usuário vendedor
 
 IMAGEM
@@ -59,16 +60,15 @@ IMAGEM
 
 [IMAGEM]
 
-<h2>Descrição da arquitetura</h2>
-Cada perfil de usuário desempenha um certo conjunto de atividade, sendo o usuário **Atendente** um perfil de acesso integral. Na imagem abaixo, segue o diagramas indicando as tarefas para cada perfil:
-
-[IMAGEM]
-
-<h2>📊 Diagramas de Arquitetura (UML)</h2>
+<h2>🏛 Descrição da arquitetura</h2>
+<p>Cada perfil de usuário desempenha um certo conjunto de atividade, sendo o <strong>Usuário Atendente</strong> um perfil de acesso integral. Na imagem abaixo, segue o diagramas indicando as tarefas para cada perfil:</p>
+<p>
 
 **DIAGRAMA DE FUNCIONADIDADES**
 
 ![DIAGRAMA DE FUNCIONADIDADES](https://user-images.githubusercontent.com/53446701/204062464-97775b85-7215-449c-bed0-10001d34521e.png)
+</p>
+<h2>📊 Unified Modeling Language (UML)</h2>
 
 **DIAGRAMA CLASSES**
 
@@ -97,28 +97,34 @@ Cada perfil de usuário desempenha um certo conjunto de atividade, sendo o usuá
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: 
 <ul>
-	<li><a href="https://www.oracle.com/java/technologies/downloads/">Java JDK</a></li>
+	<li><a href="https://www.oracle.com/java/technologies/downloads/">Java JDK-19 (sha256)</a></li>
+	<li><a href="https://www.eclipse.org/downloads/">Eclipse IDE 2022-06</a></li>
+	<li><a href="https://www.mysql.com/">MySQL Workbench 8.0 CE</a></li>
 	<li><a href="https://git-scm.com/">Git</li>
 </ul>
+
 <a>Além disto é bom ter um editor para trabalhar com o código como Eclipse IDE for Java Developers ou VSCode.</a>
 
 <h2>⚙ Funcionalidades</h2>
 
-- [ ] Cadastrar Cliente-Paciente;
-- [ ] Atualizar as informações básicas de um usuário, visando manter todas as informações do mesmo atualizada;
-- [ ] Cadastrar novos Clientes;
-- [ ] Cadastrar Serviços;
-- [ ] Cadastrar Veterinário;
-- [ ] Víncular serviço ao cliente;
-- [ ] Fechamento financeiro;
+- [x] Cadastrar Cliente/Paciente;
+- [x] Atualizar as informações básicas de um cliente/paciente, serviços e médico-veterinário;
+- [x] Excluir Cliente/Paciente;
+- [x] Cadastrar Serviços;
+- [x] Cadastrar Veterinário;
+- [x] Víncular serviço ao cliente;
+- [x] Fechamento financeiro;
 
 <h2>🛠 Tecnologias</h2>
 
 As seguintes ferramentas foram usadas na construção do projeto:
 <ul>
-	<li><a href="https://www.oracle.com/java/technologies/downloads/">Java JDK</a></li>
-	<li><a href="https://www.java.com/pt-BR/">Java</li>
-	<li>UML</li>
+	<li><a href="https://www.oracle.com/java/technologies/downloads/">Java JDK-19 (sha256)</a></li>
+	<li><a href="https://www.eclipse.org/downloads/">Eclipse IDE 2022-06</a></li>
+	<li><a href="https://www.mysql.com/">MySQL Workbench 8.0 CE</a></li>
+	<li><a href="https://git-scm.com/">Git</li>
+	<li><a href="https://trello.com/b/RMZFIjxL/buffalo-petshop">Trello</a></li>
+	<li><a href="https://www.diagrams.net/blog/move-diagrams-net">Draw.io (UML)</a></li>
 </ul>
 
 <h2>👥 Autores</h2>
