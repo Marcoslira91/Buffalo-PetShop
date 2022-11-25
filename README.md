@@ -14,13 +14,13 @@
  
  >Projeto desenvolvido como atividade avaliativa do Curso de Qualificação Socioprofissional em Programação de Software pelo Governo do Estado de Pernambuco.
 
-O sistema **Buffalo-PetShop** é uma aplicação criada para gerenciar, organizar e controlar entrada e saídas de dados financeiros e também elevação clínica de pacientes (animal).
+O **Buffalo-PetShop** é um sistema para Pet-Shop com a finalidade de gerenciar, organizar e controlar entrada e saídas de dados financeiros, de serviços e também elevação clínica de pacientes (animal).
 
-De forma pratica, simplificada e intuitiva, o sistema visa automatizar o gerenciamento de serviços e histórico clínico de clientes/pacientes, sendo possível a consulta de procedimentos realizados anteriormente, para que possa ser acompanhado de forma segura por um médico veterinário. Como também a possibilidade de cadastro e verificação do cliente-paciente.
+De forma prática, simplificada e intuitiva, o sistema visa automatizar o gerenciamento de serviços e histórico clínico de clientes/pacientes, sendo possível a consulta de procedimentos realizados anteriormente, para que possa ser acompanhado de forma segura e rápida por um médico veterinário. Como também a possibilita o cadastro e o acompanhamento do cliente-paciente.
 
-O sistema **Buffalo-PetShop**, é possivel cadastrar novos clientes-pacientes, cadastrar serviços e Médico veterinário(a), atualizar cadastrados no banco, cadastrar um novo cliente, registrar histórico, evolução e procedimentos realizados no paciente (animal).
+Com o sistema **Buffalo-PetShop**, é possivel cadastrar o cliente-paciente, os serviços a serem realizados, como também, cadastrar o Médico veterinário(a), atualizar cadastrados no banco, registrar prontuário e procedimentos realizados no paciente (animal).
 
-A aplicação foi desenvolvida pela equipe da **Buffalo** e utilizada para desenvolvimento dos conhecimento obtidos pelos mesmos no último módulo do Curso de Qualificação Socioprofissional em Programação de Software, do [Instituto de Administração e Tecnologia](https://admtec.org.br/).
+A aplicação foi desenvolvida pela equipe da **Búffalo** e utilizada para desenvolvimento dos conhecimento obtidos utilizando os paradigmas de Programação Orientada a Objetos - POO, no último módulo do Curso de Qualificação Socioprofissional em Programação de Software, do [Instituto de Administração e Tecnologia](https://admtec.org.br/). Além disso, buscamos seguir osprincípios [SOLID](https://blog.betrybe.com/linguagem-de-programacao/solid-cinco-principios-poo/) com objetivo de facilitar a manutençãoe extensão do projeto.
 </header>
 
 <h2>🔄 Ambiente de desenvolvimento e ferramentas</h2>
@@ -116,7 +116,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <a href="https://www.linkedin.com/in/jonathan-duarte-62331582/">Jonathan Duarte</a>	
 
-♥ <a href="https://www.linkedin.com/in/luanactpinto/">Luana Pinto</a>♥
+<a href="https://www.linkedin.com/in/luanactpinto/">Luana Pinto</a>
 
 Luiz Junior
 
