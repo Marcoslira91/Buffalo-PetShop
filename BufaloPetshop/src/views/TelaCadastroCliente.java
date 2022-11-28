@@ -1,27 +1,35 @@
 package views;
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import factory.ConnectionFactory;  
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import com.mysql.cj.xdevapi.Statement;
+
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ButtonGroup;
 
 public class TelaCadastroCliente extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
+	private JTextField jnome;
+	private JTextField jcpf;
+	private JTextField jtelefone;
+	private JTextField jendereco;
+	private JTextField jemail;
+	private final ButtonGroup sexobuttonGroup = new ButtonGroup();
 
 	/**
 	 * Launch the application.
@@ -61,13 +69,15 @@ public class TelaCadastroCliente extends JFrame {
 		lblNewLabel_1.setBounds(10, 11, 321, 25);
 		contentPane.add(lblNewLabel_1);
 		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("Masculino");
-		rdbtnNewRadioButton.setBounds(325, 107, 109, 23);
-		contentPane.add(rdbtnNewRadioButton);
+		JRadioButton masculinoradioButton = new JRadioButton("Masculino");
+		sexobuttonGroup.add(masculinoradioButton);
+		masculinoradioButton.setBounds(325, 107, 109, 23);
+		contentPane.add(masculinoradioButton);
 		
-		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Feminino");
-		rdbtnNewRadioButton_1.setBounds(325, 144, 109, 23);
-		contentPane.add(rdbtnNewRadioButton_1);
+		JRadioButton femininoradioButton = new JRadioButton("Feminino");
+		sexobuttonGroup.add(femininoradioButton);
+		femininoradioButton.setBounds(325, 144, 109, 23);
+		contentPane.add(femininoradioButton);
 		
 		JLabel lblNewLabel_2 = new JLabel("Sexo:");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -89,9 +99,68 @@ public class TelaCadastroCliente extends JFrame {
 		JButton btnNewButton_1 = new JButton("Continuar");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
-				TelaCadastroPet tela= new TelaCadastroPet();
-				tela.setVisible(true);
+				char sexo = '\0';
+				if(masculinoradioButton.isSelected()) {
+					sexo='M';
+					String nome= jnome.getText();
+					String cpf= jcpf.getText();
+					String telefone= jtelefone.getText();
+					String endereco= jendereco.getText();
+					String email= jemail.getText();
+					
+					try {
+						//trocar_nome_da_classe_pra_db
+						
+						java.sql.Statement s= ConnectionFactory.createConnectionToMySQL().createStatement();
+						 s.executeUpdate(" INSERT INTO Cliente(nome,cpf,email,telefone,endereco,sexo) "
+						+ "VALUE ( '"+nome+"','"+cpf+"','"+email+"','"+telefone+"','"+endereco+"','"+sexo+"')");
+						
+						JOptionPane.showMessageDialog(rootPane, "Conta criada com sucesso");
+								
+					}
+					catch (Exception e1) {
+						
+						System.out.println(e1);
+					}
+					dispose();
+					TelaCadastroPet tela= new TelaCadastroPet();
+					tela.setVisible(true);
+				} else if(femininoradioButton.isSelected()) {
+					sexo='F';
+					String nome= jnome.getText();
+					String cpf= jcpf.getText();
+					String telefone= jtelefone.getText();
+					String endereco= jendereco.getText();
+					String email= jemail.getText();
+					
+					try {
+						//trocar_nome_da_classe_pra_db
+						
+						java.sql.Statement s= ConnectionFactory.createConnectionToMySQL().createStatement();
+						 s.executeUpdate(" INSERT INTO Cliente(nome,cpf,email,telefone,endereco,sexo) "
+						+ "VALUE ( '"+nome+"','"+cpf+"','"+email+"','"+telefone+"','"+endereco+"','"+sexo+"')");
+						
+						JOptionPane.showMessageDialog(rootPane, "Conta criada com sucesso");
+								
+					}
+					catch (Exception e1) {
+						
+						System.out.println(e1);
+					}
+					dispose();
+					TelaCadastroPet tela= new TelaCadastroPet();
+					tela.setVisible(true);
+				}else {
+					JOptionPane.showMessageDialog(null,"Selecione sexo para continuar!");
+				}
+				
+				jnome.setText("");
+				jcpf.setText("");
+				jtelefone.setText("");
+				jendereco.setText("");
+				jemail.setText("");
+				
+				
 			}
 		});
 		btnNewButton_1.setBounds(335, 227, 89, 23);
@@ -107,11 +176,6 @@ public class TelaCadastroCliente extends JFrame {
 		lblNewLabel_4.setBounds(10, 111, 26, 14);
 		contentPane.add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_5 = new JLabel("Data de nascimento:");
-		lblNewLabel_5.setFont(new Font("Tahoma", Font.BOLD, 10));
-		lblNewLabel_5.setBounds(10, 164, 101, 14);
-		contentPane.add(lblNewLabel_5);
-		
 		JLabel lblNewLabel_6 = new JLabel("Endereço:");
 		lblNewLabel_6.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblNewLabel_6.setBounds(157, 111, 62, 14);
@@ -122,44 +186,34 @@ public class TelaCadastroCliente extends JFrame {
 		lblNewLabel_7.setBounds(160, 57, 59, 14);
 		contentPane.add(lblNewLabel_7);
 		
-		JLabel lblNewLabel_8 = new JLabel("Senha:\r\n");
-		lblNewLabel_8.setFont(new Font("Tahoma", Font.BOLD, 10));
-		lblNewLabel_8.setBounds(160, 164, 46, 14);
-		contentPane.add(lblNewLabel_8);
+		jnome = new JTextField();
+		jnome.setBounds(10, 70, 86, 20);
+		contentPane.add(jnome);
+		jnome.setColumns(10);
 		
-		JLabel lblNewLabel_9 = new JLabel("DD/MM/AAAA");
-		lblNewLabel_9.setFont(new Font("Tahoma", Font.PLAIN, 8));
-		lblNewLabel_9.setBounds(28, 200, 64, 14);
-		contentPane.add(lblNewLabel_9);
+		jcpf = new JTextField();
+		jcpf.setBounds(10, 124, 86, 20);
+		contentPane.add(jcpf);
+		jcpf.setColumns(10);
 		
-		textField = new JTextField();
-		textField.setBounds(10, 70, 86, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		jtelefone = new JTextField();
+		jtelefone.setBounds(157, 70, 86, 20);
+		contentPane.add(jtelefone);
+		jtelefone.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(10, 124, 86, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		jendereco = new JTextField();
+		jendereco.setBounds(159, 124, 86, 20);
+		contentPane.add(jendereco);
+		jendereco.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(10, 178, 86, 20);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		jemail = new JTextField();
+		jemail.setColumns(10);
+		jemail.setBounds(10, 179, 86, 20);
+		contentPane.add(jemail);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(157, 70, 86, 20);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
-		
-		textField_4 = new JTextField();
-		textField_4.setBounds(159, 124, 86, 20);
-		contentPane.add(textField_4);
-		textField_4.setColumns(10);
-		
-		textField_5 = new JTextField();
-		textField_5.setBounds(159, 178, 86, 20);
-		contentPane.add(textField_5);
-		textField_5.setColumns(10);
+		JLabel lblNewLabel_6_1 = new JLabel("Email:");
+		lblNewLabel_6_1.setFont(new Font("Tahoma", Font.BOLD, 10));
+		lblNewLabel_6_1.setBounds(10, 165, 62, 14);
+		contentPane.add(lblNewLabel_6_1);
 	}
 }
