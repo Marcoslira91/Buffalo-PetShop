@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
@@ -78,9 +80,6 @@ public class TelaLogin extends JFrame {
 				TelaMenu tela= new TelaMenu();
 				tela.setVisible(true);
 			}
-			
-			
-			
 		});
 		btnNewButton.setBounds(10, 227, 89, 23);
 		contentPane.add(btnNewButton);
@@ -88,18 +87,11 @@ public class TelaLogin extends JFrame {
 		JButton btnNewButton_1 = new JButton("Entrar");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
-				TelaServicosGeral tela= new TelaServicosGeral();
-				tela.setVisible(true);
+				validation();
 			}
 		});
 		btnNewButton_1.setBounds(335, 227, 89, 23);
 		contentPane.add(btnNewButton_1);
-		
-		JLabel lblNewLabel_3 = new JLabel("CPF");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 8));
-		lblNewLabel_3.setBounds(204, 128, 46, 14);
-		contentPane.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("Senha:");
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 10));
@@ -108,7 +100,20 @@ public class TelaLogin extends JFrame {
 		
 		JLabel lblNewLabel_5 = new JLabel("Bem-vindo(a)!");
 		lblNewLabel_5.setFont(new Font("Arial", Font.PLAIN, 14));
-		lblNewLabel_5.setBounds(10, 17, 148, 14);
+		lblNewLabel_5.setBounds(10, 17, 182, 14);
 		contentPane.add(lblNewLabel_5);
+		
+	}
+	public void validation() {
+		
+		if(textField.getText().equals("admin")  && passwordField.getText().equals("123")) {
+			JOptionPane.showMessageDialog(null,"Bem-vindo!");
+			dispose();
+			TelaServicosGeral tela= new TelaServicosGeral();
+			tela.setVisible(true);
+		}else {
+	
+			JOptionPane.showMessageDialog(null,"Erro, tente novamente!");
+		}
 	}
 }
