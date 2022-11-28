@@ -58,7 +58,7 @@ public class TelaServicoDecisao extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				TelaFinanceiro tela= new TelaFinanceiro();
+				TelaMenu tela= new TelaMenu();
 				tela.setVisible(true);
 			}
 			
