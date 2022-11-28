@@ -76,16 +76,6 @@ public class TelaMenu extends JFrame {
 		lblNewLabel_2.setBounds(10, 63, 386, 25);
 		contentPane.add(lblNewLabel_2);
 		
-		JButton btnNewButton_2 = new JButton("Vet");
-		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				dispose();
-				TelaLoginVet tela= new TelaLoginVet();
-				tela.setVisible(true);
-			}
-		});
-		btnNewButton_2.setBounds(161, 180, 106, 23);
-		contentPane.add(btnNewButton_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("\"Excelência em tudo que fazemos\"");
 		lblNewLabel_3.setFont(new Font("Agency FB", Font.ITALIC, 15));
